@@ -28,11 +28,11 @@ def predict(file_path):
     # Tambahkan ambang batas keyakinan
     THRESHOLD = 0.5  # 50% confidence threshold
     if confidence < THRESHOLD:
-        return "Unknown", "Bukan Sampah", confidence
+        return "Unknown", "Bukan Sampah", round(confidence, 2)  # Batasi confidence menjadi 2 angka
 
     class_name = class_names[class_index]
 
     organic_classes = ["coffee_grounds", "eggshells", "food_waste", "tea_bags"]
     category = "Organik" if class_name in organic_classes else "Non-Organik"
 
-    return class_name, category, confidence
+    return class_name, category, round(confidence, 2)  # Batasi confidence menjadi 2 angka
