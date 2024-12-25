@@ -1,0 +1,15 @@
+[project]
+name = "streamlitt"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "reghina", email = "nana@gmail.com"},
+]
+dependencies = ["streamlit>=1.41.0", "tensorflow>=2.18.0", "joblib>=1.4.2"]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "nana"}
+
+
+[tool.pdm]
+distribution = false

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predict</title>
+    <link rel="stylesheet" href="static/css/predict.css" />
+  </head>
+  <body>
+    <!-- Latar belakang -->
+    <div class="background"></div>
+
+    <!-- Kontainer -->
+    <div class="container">
+      <h1>Image Prediction</h1>
+      <form method="POST" enctype="multipart/form-data">
+        <!-- Gaya khusus untuk input file -->
+        <label class="file-label">
+          <input type="file" name="file" class="file-input" />
+          Choose File
+        </label>
+        <button type="submit" class="btn">Predict</button>
+      </form>
+
+      {% if uploaded_image %}
+      <div class="result">
+        <img
+          src="{{ url_for('static', filename=uploaded_image) }}"
+          alt="Uploaded Image"
+        />
+        <p>Class: {{ class_name }}</p>
+        <p>Category: {{ category }}</p>
+        <p>Confidence: {{ confidence }}</p>
+      </div>
+      {% endif %} {% if error %}
+      <p style="color: red">{{ error }}</p>
+      {% endif %}
+
+      <!-- Tombol Back to Start -->
+      <div style="margin-top: 20px">
+        <a href="{{ url_for('index') }}">
+          <button type="button" class="back-button">Back to Start</button>
+        </a>
+      </div>
+    </div>
+    <!-- Gambar di kanan -->
+    <!-- <div class="side-image">
+      <img src="static/images/gambar3.jpg" alt="Right Image" />
+    </div> -->
+  </div>
+ </body>
+</html>

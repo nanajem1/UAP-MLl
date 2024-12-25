@@ -1,0 +1,114 @@
+/* General Body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e09999;
+  color: #333;
+}
+
+/* Background */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/gambar10.jpg"); /* Sesuaikan path gambar */
+  background-size: cover; /* Menutup seluruh layar */
+  background-repeat: no-repeat; /* Tidak mengulang gambar */
+  background-position: center; /* Pusatkan gambar */
+  z-index: -1; /* Letakkan di belakang konten */
+}
+
+/* Kontainer utama */
+.container {
+  max-width: 500px; /* Lebar maksimal kontainer */
+  width: 80%; /* Responsif untuk layar kecil */
+  margin: 30px auto; /* Pusatkan secara horizontal dengan jarak atas/bawah */
+  background: rgb(255, 250, 250);
+  padding: 20px;
+  border-radius: 8px; /* Sudut membulat */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  text-align: center;
+  overflow: hidden; /* Hindari konten melampaui batas */
+}
+
+/* Heading */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Gambar hasil prediksi */
+.result img {
+  max-width: 50%; /* Pastikan gambar tidak melampaui batas kontainer */
+  height: 50%; /* Jaga proporsi gambar */
+  margin: 10px auto;
+  display: block;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px; /* Sudut membulat */
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+/* File Input Label */
+.file-label {
+  display: inline-block; /* Agar tampil seperti tombol */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px; /* Sudut membulat */
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 100px; /* Jarak antara tombol Choose File dan Predict */
+  transition: background-color 0.3s ease; /* Animasi hover */
+}
+
+.file-label:hover {
+  background-color: #0056b3;
+}
+
+/* Hide original file input */
+.file-input {
+  display: none;
+}
+
+/* Buttons */
+.container .btn {
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 15px; /* Sudut membulat */
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.container .btn:hover {
+  background-color: #0056b3; /* Warna saat hover */
+  text-decoration: none;
+}
+
+/* Back Button */
+.back-button {
+  padding: 10px 20px;
+  background-color: #1e57a8;
+  color: white;
+  border: none;
+  border-radius: 10px; /* Sudut membulat */
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #5795d7; /* Warna saat hover */
+}
